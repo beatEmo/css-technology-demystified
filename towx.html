@@ -7,7 +7,6 @@
   </head>
   <body>
     <div class="container">
-      <!-- Scale Carousel Map -->
       <ul id="scale-carousel-map">
         <li class="slide a"></li>
         <li class="slide b"></li>
@@ -15,8 +14,6 @@
         <li class="slide"></li>
         <li class="slide"></li>
       </ul>
-      <!-- visual frame -->
-      <!--   <div class="visual-frame"></div> -->
     </div>
     <div>
       <button id="zuo">zuo</button>
@@ -69,23 +66,29 @@
       border-radius: 4px;
       color: #fff;
       font-size: 1.5rem;
-      transition: all cubic-bezier(1, 0, 0, 1) 0.8s;
+      transition: all linear 0.8s;
       z-index: 0;
+      display: none;
     }
     .current {
       transform: translate(-100%);
+      z-index: 12 !important;
+      display: block !important;
     }
     .a {
       transform: translateX(0);
       z-index: 4 !important;
+      display: block !important;
     }
     .b {
       transform: translateX(10%);
       z-index: 2 !important;
+      display: block !important;
     }
     .c {
       transform: translateX(20%);
       z-index: 1 !important;
+      display: block !important;
     }
     /* #scale-carousel-map .slide.current {
       transform: translateX(0);
