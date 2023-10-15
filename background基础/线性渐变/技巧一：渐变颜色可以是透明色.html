@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 20px;
+      background-color: gainsboro;
+    }
+    .border {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 200px;
+      height: 200px;
+    }
+    .border1 {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 500px;
+      height: 120px;
+    }
+    .org {
+      background: linear-gradient(45deg, red 12px, blue 0);
+    }
+    .normal-linear-gradient {
+      background: linear-gradient(skyblue, red, orange, white, black, green);
+    }
+    .g-container {
+      display: flex;
+      position: relative;
+      list-style: none;
+      width: 355px;
+      border: 2px solid #000;
+      overflow: hidden;
+    }
+    .g-container::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100px;
+      background: linear-gradient(90deg, transparent, #fff);
+    }
+    .g-container li {
+      border: 1px solid #000;
+      margin: 5px;
+      /* position: absolute; */
+    }
+    .gd {
+      background: linear-gradient(red, transparent);
+    }
+  </style>
+  <body>
+    <div>
+      <h2>顔色过度到透明色</h2>
+      <div class="border gd"></div>
+    </div>
+    <div class="border1">
+      一种遮罩效果
+      <ul class="g-container">
+        <li>Button</li>
+        <li>Button</li>
+        <li>Button</li>
+        <li>Button</li>
+        <li>Button</li>
+        <li>Button</li>
+      </ul>
+    </div>
+  </body>
+</html>

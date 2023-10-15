@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 20px;
+      background-color: gainsboro;
+    }
+    .border {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 200px;
+      height: 200px;
+    }
+    .border1 {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 500px;
+      height: 120px;
+    }
+    .q2l {
+      background: linear-gradient(
+        /* #fff, */ #fff 0px,
+        #fff 50px,
+        green 50px,
+        green 100px,
+        blue 100px,
+        blue 150px,
+        skyblue 150px,
+        skyblue 200px
+      );
+    }
+    .q2sjx {
+      background: linear-gradient(
+        45deg,
+        #f00 0%,
+        #f00 50%,
+        transparent 50%,
+        transparent 100%
+      );
+    }
+  </style>
+  <body>
+    <div>
+      技巧二 渐变可以是从一种颜色直接到另外一种颜色
+      <div class="border q2l"></div>
+      <div class="border q2sjx"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse at 0 0, red 0, blue, green 100%);
+    }
+    .box2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(
+        ellipse farthest-side at top 50px left 100px,
+        red 0,
+        red 30%,
+        blue 30%,
+        blue 70%,
+        green 70%,
+        green 100%
+      );
+    }
+    .hx1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      border: 1px solid black;
+      font-weight: bold;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(
+          circle at center,
+          transparent 0%,
+          transparent 30%,
+          black 30%,
+          black 31%,
+          transparent 31%,
+          transparent 100%
+        ),
+        radial-gradient(
+          circle at top 0 left 0,
+          transparent 0%,
+          transparent 30%,
+          black 30%,
+          black 31%,
+          transparent 31%,
+          transparent 100%
+        ),
+        radial-gradient(
+          circle at top 0 left 100px,
+          transparent 0%,
+          transparent 30%,
+          black 30%,
+          black 31%,
+          transparent 31%,
+          transparent 100%
+        );
+    }
+  </style>
+  <body>
+    <div class="box1">圆心的位置</div>
+    <div class="box2">圆心的size</div>
+    <div class="hx1">圆环弧线</div>
+  </body>
+</html>

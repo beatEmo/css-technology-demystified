@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 20px;
+      background-color: gainsboro;
+    }
+    .border {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 200px;
+      height: 200px;
+    }
+    .border1 {
+      border: 2px solid #000;
+      margin: 20px;
+      width: 500px;
+      height: 120px;
+    }
+    .nq {
+      width: 200px;
+      height: 100px;
+      background: linear-gradient(45deg, transparent 15px, deeppink 0),
+        linear-gradient(135deg, transparent 15px, deeppink 0),
+        linear-gradient(-135deg, transparent 15px, deeppink 0),
+        linear-gradient(-45deg, transparent 15px, deeppink 0);
+      background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+      background-position: bottom left, top left, top right, bottom right;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <body>
+    <div>
+      技巧三：渐变是可以叠加多层的
+      <div class="nq"></div>
+    </div>
+  </body>
+</html>
