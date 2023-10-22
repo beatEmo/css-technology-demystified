@@ -1,18 +1,15 @@
 <template>
   <div class="native-container">
-    <div
-      class="cube"
-      :style="{
-        '--length': length,
-        '--degOut': degOut,
-        '--degIn': degIn,
-        '--angle': angle
-      }"
-    >
+    <div class="cube">
       <span
+        :class="{
+          left: index === current % data.length,
+          center: index === (current + 1) % data.length,
+          right: index === (current + 2) % data.length
+        }"
         v-for="(item, index) of data"
         :key="index"
-        :style="{ '--i': index, backgroundColor: item.color }"
+        :style="{ backgroundColor: item.color }"
         >{{ item.num }}</span
       >
     </div>
@@ -27,86 +24,107 @@ export default {
       data: [
         { num: 1, color: "red" },
         { num: 2, color: "green" },
-        { num: 3, color: "skyblue" },
-        { num: 4, color: "pink" }
+        { num: 3, color: "skyblue" }
+        // { num: 4, color: "pink" }
       ],
-      angle: 0,
-      degOut: 0,
-      degIn: 0,
-      length: 0,
-      node: null,
-      startX: 0,
-      endX: 0,
-      moveX: 0,
-      index: 0,
-      NOde: null
+      current: 0,
+      transitionFlag: true,
+      // 展示三个面
+      isShowM: 3,
+      styleEL: [
+        {
+          transform: "translate(-100%, -50%)"
+        },
+        {
+          transform: "translate(0,-50%)",
+          height: "100%"
+          // zIndex: "-1"
+        },
+        {
+          transform: "translate(12.5%,-50%)",
+          height: "90%"
+          // zIndex: "-1"
+        }
+      ]
     };
   },
   mounted() {
     // this.a();
-    this.node = document.querySelector(".native-container");
+    this.node = document.querySelector(".native-container > .cube");
     this.node.addEventListener("touchstart", this.touchStart);
     this.node.addEventListener("touchmove", this.touchMove);
     this.node.addEventListener("touchend", this.touchEnd);
 
-    document.querySelector(".cube").addEventListener("transitionend", () => {
-      console.log(1111);
-    });
+    for (let i = this.isShowM - 1; i > -1; i--) {
+      const index = (this.current + i) % this.data.length;
+      this.node.children[index].style.visibility = "visible";
+    }
   },
   methods: {
     touchStart(e) {
       this.startX = e.touches[0].screenX;
     },
     touchMove(e) {
-      document.querySelector(".cube").style.transition = "1s transform";
       this.endX = e.changedTouches[0].screenX;
       this.moveX = this.endX - this.startX;
       if (this.moveX > 0) {
-        // xia -
+        console.log(111);
       } else {
         // zuo
-        // document.querySelector(".cube").children[0].classList.add("active");
-        // document.querySelector(".cube").children[1].style.transform =
-        //   " translate(0) scale(1)";
       }
     },
-    touchEnd() {
+    async touchEnd() {
       if (this.moveX > 0) {
         //
       } else {
-        if (this.index == 0) {
-          this.NOde = document.querySelector(".cube").cloneNode(true);
-        }
         //
-        document.querySelector(".cube").children[this.index].style.transform =
-          " translate(-105%)";
-        document.querySelector(".cube").children[
-          this.index + 1
-        ].style.transform = " translate(0) scale(1)";
-        document.querySelector(".cube").children[
-          this.index + 2
-        ].style.transform = "  translate(15%) scale(0.9)";
-
-        this.index++;
-        if (this.index % 4 > 1) {
-          for (const item of Array.from(this.NOde.children))
-            document.querySelector(".cube").appendChild(item);
+        console.log(111);
+        this.transitionFlag = true;
+        // node.removeEventListener("transitionend", this.move);
+        for (let i = this.isShowM - 1; i > -1; i--) {
+          const index = (this.current + i) % this.data.length;
+          for (let atrr in this.styleEL[i]) {
+            console.log(this.node.children[index]);
+            this.node.children[index].style[atrr] = this.styleEL[i][atrr];
+          }
         }
+        this.node.children[this.current % this.data.length].style.visibility =
+          "hidden";
+
+        this.node.children[this.current % this.data.length].addEventListener(
+          "transitionend",
+          this.move
+        );
       }
     },
-    a() {
-      const nodes = Array.from(document.querySelector(".cube").children);
-      nodes.forEach((item, index) => {
-        if (index == 0) {
-          item.className = "a";
+    move() {
+      if (!this.transitionFlag) return;
+      console.log(this.current);
+
+      for (let i = this.isShowM - 1; i > -1; i--) {
+        const index = (this.current + i) % this.data.length;
+        for (let atrr in this.styleEL[i]) {
+          console.log(this.node.children[index]);
+          this.node.children[index].style[atrr] = "";
         }
-        if (index == 1) {
-          item.className = "b";
-        }
-        if (index == 2) {
-          item.className = "b";
-        }
+      }
+      this.node.children[this.current % this.data.length].style.visibility =
+        "hidden";
+      this.current++;
+      this.$nextTick(() => {
+        document
+          .querySelector(".right")
+          .addEventListener("transitionend", () => {
+            for (let i = this.isShowM - 1; i > -1; i--) {
+              const index = (this.current + i) % this.data.length;
+              this.node.children[index].style.visibility = "visible";
+            }
+          });
       });
+      this.transitionFlag = false;
+      if (this.current > this.data.length - 1) {
+        this.current = 0;
+      }
     }
   }
 };
@@ -122,23 +140,6 @@ html {
 }
 </style>
 <style lang="scss" scoped>
-/* .native-container:hover > .cube {
-  transform: rotateX(360deg);
-} */
-.active {
-  animation: 1s move cubic-bezier(0, 0, 1, 0.5);
-}
-@keyframes move {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(-110%);
-  }
-  100% {
-    transform: translate(30%) scale(0.8);
-  }
-}
 .native-container {
   width: 100vw;
   height: 100vh;
@@ -146,50 +147,61 @@ html {
   perspective: 800px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid #000;
+  perspective: 800px;
   .cube {
+    display: flex;
+    align-items: center;
     width: calc(100% - 20px);
     height: 216px;
-    position: absolute;
-    left: 0;
+    position: relative;
+    border: 1px solid #000;
+    transform-style: preserve-3d;
+    /* left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
-
+    margin: auto; */
+    overflow: hidden;
     & > span {
-      position: absolute;
       display: flex;
+      transition: all 0.4s;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%;
-      transition: all 0.6s;
       text-align: center;
       font: 50px/300px "微软雅黑";
       backface-visibility: hidden;
+
       width: 80%;
-      transform: translate(30%) scale(0.8);
-      z-index: var(--i);
-      &:nth-child(1) {
-        /* z-index: 9 !important;
-        transform: translate(0) !important; */
-        z-index: 9;
-        transform: translate(0);
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      visibility: hidden;
+      height: 100%;
+
+      &.left {
+        visibility: hidden;
+        z-index: 3;
+        height: 100%;
+        transform: translate(0, -50%);
       }
-      &:nth-child(2) {
-        /* background: skyblue; */
-        /* z-index: 8 !important;
-        transform: translate(15%) scale(0.9) !important; */
-        z-index: 8;
-        transform: translate(15%) scale(0.9);
+      &.center {
+        visibility: hidden;
+        z-index: 2;
+        height: 90%;
+        transform: translate(12.5%, -50%);
       }
-      &:nth-child(3) {
-        /* background: pink; */
-        /* z-index: 7 !important;
-        transform: translate(30%) scale(0.8) !important; */
-        z-index: 7;
-        transform: translate(30%) scale(0.8);
+      &.right {
+        visibility: hidden;
+        z-index: 1;
+        height: 80%;
+        transform: translate(25%, -50%);
       }
     }
   }
