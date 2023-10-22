@@ -33,7 +33,7 @@ export default {
       isShowM: 3,
       styleEL: [
         {
-          transform: "translate(-100%, -50%)"
+          transform: "translate(-110%, -50%)"
         },
         {
           transform: "translate(0,-50%)",
@@ -49,16 +49,10 @@ export default {
     };
   },
   mounted() {
-    // this.a();
     this.node = document.querySelector(".native-container > .cube");
     this.node.addEventListener("touchstart", this.touchStart);
     this.node.addEventListener("touchmove", this.touchMove);
     this.node.addEventListener("touchend", this.touchEnd);
-
-    for (let i = this.isShowM - 1; i > -1; i--) {
-      const index = (this.current + i) % this.data.length;
-      this.node.children[index].style.visibility = "visible";
-    }
   },
   methods: {
     touchStart(e) {
@@ -80,7 +74,6 @@ export default {
         //
         console.log(111);
         this.transitionFlag = true;
-        // node.removeEventListener("transitionend", this.move);
         for (let i = this.isShowM - 1; i > -1; i--) {
           const index = (this.current + i) % this.data.length;
           for (let atrr in this.styleEL[i]) {
@@ -88,8 +81,6 @@ export default {
             this.node.children[index].style[atrr] = this.styleEL[i][atrr];
           }
         }
-        this.node.children[this.current % this.data.length].style.visibility =
-          "hidden";
 
         this.node.children[this.current % this.data.length].addEventListener(
           "transitionend",
@@ -108,19 +99,7 @@ export default {
           this.node.children[index].style[atrr] = "";
         }
       }
-      this.node.children[this.current % this.data.length].style.visibility =
-        "hidden";
       this.current++;
-      this.$nextTick(() => {
-        document
-          .querySelector(".right")
-          .addEventListener("transitionend", () => {
-            for (let i = this.isShowM - 1; i > -1; i--) {
-              const index = (this.current + i) % this.data.length;
-              this.node.children[index].style.visibility = "visible";
-            }
-          });
-      });
       this.transitionFlag = false;
       if (this.current > this.data.length - 1) {
         this.current = 0;
@@ -186,20 +165,20 @@ html {
       height: 100%;
 
       &.left {
-        visibility: hidden;
+        visibility: visible;
         z-index: 3;
         height: 100%;
         transform: translate(0, -50%);
       }
       &.center {
-        visibility: hidden;
+        visibility: visible;
         z-index: 2;
         height: 90%;
         transform: translate(12.5%, -50%);
       }
       &.right {
-        visibility: hidden;
-        z-index: 1;
+        visibility: visible;
+        z-index: -21;
         height: 80%;
         transform: translate(25%, -50%);
       }
