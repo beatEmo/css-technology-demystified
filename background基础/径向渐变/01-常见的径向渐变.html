@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .jx1 {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(#fff, #000, transparent);
+    }
+    .jx2 {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(
+        #fff 0%,
+        #fff 50%,
+        #000 50%,
+        #000 80%,
+        transparent 80%,
+        transparent 100%
+      );
+    }
+  </style>
+  <body>
+    <div>
+      <div class="jx1">径向渐变</div>
+      <div class="jx2">从一个颜色直接到另一个颜色</div>
+    </div>
+  </body>
+</html>
