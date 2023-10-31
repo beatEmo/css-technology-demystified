@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 300px;
+      height: 100px;
+      background: linear-gradient(90deg, #ffc700 0%, #e91e1e 50%, #6f27b0 100%);
+      background-position: 0 0;
+      background-size: 200% 100%;
+      animation: bgposition 2s infinite linear alternate;
+    }
+    @keyframes bgposition {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+  </style>
+  <body>
+    <div></div>
+  </body>
+</html>
