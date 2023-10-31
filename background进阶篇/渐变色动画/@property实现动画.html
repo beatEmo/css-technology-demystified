@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @property --colorA {
+      syntax: "<color>";
+      inherits: false;
+      initial-value: fuchsia;
+    }
+    @property --colorB {
+      syntax: "<color>";
+      inherits: false;
+      initial-value: #f79188;
+    }
+    @property --colorC {
+      syntax: "<color>";
+      inherits: false;
+      initial-value: red;
+    }
+    div {
+      width: 300px;
+      height: 100px;
+      background: linear-gradient(
+        90deg,
+        var(--colorA),
+        var(--colorB),
+        var(--colorC)
+      );
+      animation: identifier 10s infinite alternate;
+    }
+    @keyframes identifier {
+      20% {
+        --colorA: red;
+        --colorC: #a93ee0;
+        --colorF: fuchsia;
+      }
+      40% {
+        --colorA: #ff3c41;
+        --colorC: #e228a0;
+        --colorF: #2e4c96;
+      }
+      60% {
+        --colorA: orange;
+        --colorC: green;
+        --colorF: teal;
+      }
+      80% {
+        --colorA: #ae63e4;
+        --colorC: #0ebeff;
+        --colorF: #efc371;
+      }
+    }
+  </style>
+  <body>
+    <div></div>
+  </body>
+</html>
