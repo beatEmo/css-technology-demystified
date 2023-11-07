@@ -6,7 +6,6 @@
 >
 > - mask的语法和background基本一致
 
-
 #### 一个简单的背景图（mask版）
 
 > **mask 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域**
@@ -106,3 +105,62 @@ ul {
 > 切记： **尝试去理解这个属性被设计出来的目的，以及想要解决的问题** 。
 >
 > Mask 的核心就是遮罩，遮挡住元素的内容（可以是部分挡住，可以是逐渐消失，甚至是可以分块挡住），显示出其元素背后的内容。
+
+
+
+
+#### 技巧五：`mask-composite` 组合遮罩大法，让切图更轻松
+
+> 当一个元素存在多重 mask 时，我们就可以运用 `mask-composite` 进行效果叠加。
+>
+> 添加了 `-webkit-mask-composite: source-in` 后，我们就可以得到两个 mask 图形的重叠部分，再基于这个重叠部分作用到整个 mask 遮罩
+
+```
+    .original {
+      width: 200px;
+      height: 200px;
+      background: #000;
+      -webkit-mask: radial-gradient(
+          circle at 100% 0,
+          #000,
+          #000 199px,
+          transparent 200px
+        ),
+        radial-gradient(circle at 0 0, #000, #000 199px, transparent 200px);
+      -webkit-mask-composite: source-in;
+    }
+```
+
+![1699373416832](image/初识mask/1699373416832.png)
+
+`mask-composite`的其他妙用
+
+```
+{
+    -webkit-mask-composite: clear; /*清除，不显示任何遮罩*/
+    -webkit-mask-composite: copy; /*只显示上方遮罩，不显示下方遮罩*/
+    -webkit-mask-composite: source-over; 
+    -webkit-mask-composite: source-in; /*只显示重合的地方*/
+    -webkit-mask-composite: source-out; /*只显示上方遮罩，重合的地方不显示*/
+    -webkit-mask-composite: source-atop;
+    -webkit-mask-composite: destination-over;
+    -webkit-mask-composite: destination-in; /*只显示重合的地方*/
+    -webkit-mask-composite: destination-out;/*只显示下方遮罩，重合的地方不显示*/
+    -webkit-mask-composite: destination-atop;
+    -webkit-mask-composite: xor; /*只显示不重合的地方*/
+}
+```
+
+标准规范
+
+```
+{
+    /* Keyword values */
+    mask-composite: add;
+    mask-composite: subtract;
+    mask-composite: intersect;
+    mask-composite: exclude;
+}
+```
+
+![1699373814809](image/初识mask/1699373814809.png)
