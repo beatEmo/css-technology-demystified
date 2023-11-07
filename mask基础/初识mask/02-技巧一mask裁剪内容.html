@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .bg {
+      width: 200px;
+      height: 120px;
+      background: linear-gradient(135deg, transparent 15px, blue 0) top left,
+        linear-gradient(-135deg, transparent 15px, deeppink 0) top right,
+        linear-gradient(-45deg, transparent 15px, deeppink 0) bottom right,
+        linear-gradient(45deg, transparent 15px, deeppink 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+    .mask {
+      width: 610px;
+      height: 280px;
+      background: url("./img/1.jpg") no-repeat center / 100%;
+      -webkit-mask: linear-gradient(135deg, transparent 15px, deeppink 0) top
+          left,
+        linear-gradient(-135deg, transparent 15px, deeppink 0) top right,
+        linear-gradient(-45deg, transparent 15px, deeppink 0) bottom right,
+        linear-gradient(45deg, transparent 15px, deeppink 0) bottom left;
+      -webkit-mask-size: 50.5% 50.5%;
+      -webkit-mask-repeat: no-repeat;
+    }
+    .bg-inset-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      width: 300px;
+      height: 160px;
+      background: radial-gradient(
+          circle at 100% 100%,
+          transparent 12px,
+          #2179f5 13px
+        ),
+        radial-gradient(circle at 0 0, transparent 12px, #2179f5 13px),
+        radial-gradient(circle at 100% 0, transparent 12px, #2179f5 13px),
+        radial-gradient(circle at 0 100%, transparent 12px, #2179f5 13px);
+      background-repeat: no-repeat;
+      background-position: right bottom, left top, right top, left bottom;
+      background-size: 50% 50%;
+    }
+    .mask-inset-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      width: 300px;
+      height: 160px;
+      background: linear-gradient(45deg, #2179f5, #e91e63);
+      -webkit-mask: radial-gradient(
+          circle at 100% 100%,
+          transparent 12px,
+          #2179f5 13px
+        ),
+        radial-gradient(circle at 0 0, transparent 12px, #2179f5 13px),
+        radial-gradient(circle at 100% 0, transparent 12px, #2179f5 13px),
+        radial-gradient(circle at 0 100%, transparent 12px, #2179f5 13px);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: right bottom, left top, right top, left bottom;
+      -webkit-mask-size: 70% 70%;
+    }
+  </style>
+  <body>
+    <div class="bg"></div>
+    <div class="mask"></div>
+    <div class="bg-inset-circle">内切圆角</div>
+    <div class="mask-inset-circle">内切圆角</div>
+  </body>
+</html>
