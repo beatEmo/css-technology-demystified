@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .original {
+      border: 1px solid blue;
+      width: 400px;
+      height: 400px;
+      background: #000;
+      -webkit-mask: radial-gradient(
+          circle farthest-side at top 50% left 50%,
+          #000 0,
+          #000 100px,
+          transparent 100px,
+          transparent 200px
+        ),
+        radial-gradient(
+          circle farthest-side at top 25% left 25%,
+          #000 0,
+          #000 100px,
+          transparent 200px,
+          transparent 200px
+        );
+      /* -webkit-mask-size: 100% 100%, 100% 50%; */
+      -webkit-mask-composite: source-in;
+    }
+  </style>
+  <body>
+    <div class="original"></div>
+  </body>
+</html>

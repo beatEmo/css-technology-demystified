@@ -1,0 +1,27 @@
+@property --per {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: -10%;
+}
+
+div {
+  width: 300px;
+  height: 180px;
+  background: url("./img/1.jpg");
+  position: relative;
+  mask: conic-gradient(
+    #000 0,
+    #000 var(--per),
+    transparent calc(var(--per) + 10%),
+    transparent
+  );
+  animation: maskChange 1.2s ease-in-out infinite;
+}
+@keyframes maskChange {
+  from {
+    --per: -10%;
+  }
+  to {
+    --per: 100%;
+  }
+}

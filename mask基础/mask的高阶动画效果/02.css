@@ -1,0 +1,414 @@
+div {
+  width: 300px;
+  height: 180px;
+  background: url("./img/1.jpg");
+  position: relative;
+  animation: maskChange 1.2s ease-in-out infinite;
+}
+
+@keyframes maskChange {
+  0% {
+    -webkit-mask: conic-gradient(#000 0, #000 -10%, transparent 0%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -10%, transparent 0%, transparent 100%);
+  }
+  1% {
+    -webkit-mask: conic-gradient(#000 0, #000 -9%, transparent 1%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -9%, transparent 1%, transparent 100%);
+  }
+  2% {
+    -webkit-mask: conic-gradient(#000 0, #000 -8%, transparent 2%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -8%, transparent 2%, transparent 100%);
+  }
+  3% {
+    -webkit-mask: conic-gradient(#000 0, #000 -7%, transparent 3%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -7%, transparent 3%, transparent 100%);
+  }
+  4% {
+    -webkit-mask: conic-gradient(#000 0, #000 -6%, transparent 4%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -6%, transparent 4%, transparent 100%);
+  }
+  5% {
+    -webkit-mask: conic-gradient(#000 0, #000 -5%, transparent 5%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -5%, transparent 5%, transparent 100%);
+  }
+  6% {
+    -webkit-mask: conic-gradient(#000 0, #000 -4%, transparent 6%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -4%, transparent 6%, transparent 100%);
+  }
+  7% {
+    -webkit-mask: conic-gradient(#000 0, #000 -3%, transparent 7%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -3%, transparent 7%, transparent 100%);
+  }
+  8% {
+    -webkit-mask: conic-gradient(#000 0, #000 -2%, transparent 8%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -2%, transparent 8%, transparent 100%);
+  }
+  9% {
+    -webkit-mask: conic-gradient(#000 0, #000 -1%, transparent 9%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 -1%, transparent 9%, transparent 100%);
+  }
+  10% {
+    -webkit-mask: conic-gradient(#000 0, #000 0%, transparent 10%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 0%, transparent 10%, transparent 100%);
+  }
+  11% {
+    -webkit-mask: conic-gradient(#000 0, #000 1%, transparent 11%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 1%, transparent 11%, transparent 100%);
+  }
+  12% {
+    -webkit-mask: conic-gradient(#000 0, #000 2%, transparent 12%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 2%, transparent 12%, transparent 100%);
+  }
+  13% {
+    -webkit-mask: conic-gradient(#000 0, #000 3%, transparent 13%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 3%, transparent 13%, transparent 100%);
+  }
+  14% {
+    -webkit-mask: conic-gradient(#000 0, #000 4%, transparent 14%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 4%, transparent 14%, transparent 100%);
+  }
+  15% {
+    -webkit-mask: conic-gradient(#000 0, #000 5%, transparent 15%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 5%, transparent 15%, transparent 100%);
+  }
+  16% {
+    -webkit-mask: conic-gradient(#000 0, #000 6%, transparent 16%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 6%, transparent 16%, transparent 100%);
+  }
+  17% {
+    -webkit-mask: conic-gradient(#000 0, #000 7%, transparent 17%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 7%, transparent 17%, transparent 100%);
+  }
+  18% {
+    -webkit-mask: conic-gradient(#000 0, #000 8%, transparent 18%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 8%, transparent 18%, transparent 100%);
+  }
+  19% {
+    -webkit-mask: conic-gradient(#000 0, #000 9%, transparent 19%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 9%, transparent 19%, transparent 100%);
+  }
+  20% {
+    -webkit-mask: conic-gradient(#000 0, #000 10%, transparent 20%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 10%, transparent 20%, transparent 100%);
+  }
+  21% {
+    -webkit-mask: conic-gradient(#000 0, #000 11%, transparent 21%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 11%, transparent 21%, transparent 100%);
+  }
+  22% {
+    -webkit-mask: conic-gradient(#000 0, #000 12%, transparent 22%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 12%, transparent 22%, transparent 100%);
+  }
+  23% {
+    -webkit-mask: conic-gradient(#000 0, #000 13%, transparent 23%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 13%, transparent 23%, transparent 100%);
+  }
+  24% {
+    -webkit-mask: conic-gradient(#000 0, #000 14%, transparent 24%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 14%, transparent 24%, transparent 100%);
+  }
+  25% {
+    -webkit-mask: conic-gradient(#000 0, #000 15%, transparent 25%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 15%, transparent 25%, transparent 100%);
+  }
+  26% {
+    -webkit-mask: conic-gradient(#000 0, #000 16%, transparent 26%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 16%, transparent 26%, transparent 100%);
+  }
+  27% {
+    -webkit-mask: conic-gradient(#000 0, #000 17%, transparent 27%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 17%, transparent 27%, transparent 100%);
+  }
+  28% {
+    -webkit-mask: conic-gradient(#000 0, #000 18%, transparent 28%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 18%, transparent 28%, transparent 100%);
+  }
+  29% {
+    -webkit-mask: conic-gradient(#000 0, #000 19%, transparent 29%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 19%, transparent 29%, transparent 100%);
+  }
+  30% {
+    -webkit-mask: conic-gradient(#000 0, #000 20%, transparent 30%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 20%, transparent 30%, transparent 100%);
+  }
+  31% {
+    -webkit-mask: conic-gradient(#000 0, #000 21%, transparent 31%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 21%, transparent 31%, transparent 100%);
+  }
+  32% {
+    -webkit-mask: conic-gradient(#000 0, #000 22%, transparent 32%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 22%, transparent 32%, transparent 100%);
+  }
+  33% {
+    -webkit-mask: conic-gradient(#000 0, #000 23%, transparent 33%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 23%, transparent 33%, transparent 100%);
+  }
+  34% {
+    -webkit-mask: conic-gradient(#000 0, #000 24%, transparent 34%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 24%, transparent 34%, transparent 100%);
+  }
+  35% {
+    -webkit-mask: conic-gradient(#000 0, #000 25%, transparent 35%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 25%, transparent 35%, transparent 100%);
+  }
+  36% {
+    -webkit-mask: conic-gradient(#000 0, #000 26%, transparent 36%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 26%, transparent 36%, transparent 100%);
+  }
+  37% {
+    -webkit-mask: conic-gradient(#000 0, #000 27%, transparent 37%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 27%, transparent 37%, transparent 100%);
+  }
+  38% {
+    -webkit-mask: conic-gradient(#000 0, #000 28%, transparent 38%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 28%, transparent 38%, transparent 100%);
+  }
+  39% {
+    -webkit-mask: conic-gradient(#000 0, #000 29%, transparent 39%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 29%, transparent 39%, transparent 100%);
+  }
+  40% {
+    -webkit-mask: conic-gradient(#000 0, #000 30%, transparent 40%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 30%, transparent 40%, transparent 100%);
+  }
+  41% {
+    -webkit-mask: conic-gradient(#000 0, #000 31%, transparent 41%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 31%, transparent 41%, transparent 100%);
+  }
+  42% {
+    -webkit-mask: conic-gradient(#000 0, #000 32%, transparent 42%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 32%, transparent 42%, transparent 100%);
+  }
+  43% {
+    -webkit-mask: conic-gradient(#000 0, #000 33%, transparent 43%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 33%, transparent 43%, transparent 100%);
+  }
+  44% {
+    -webkit-mask: conic-gradient(#000 0, #000 34%, transparent 44%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 34%, transparent 44%, transparent 100%);
+  }
+  45% {
+    -webkit-mask: conic-gradient(#000 0, #000 35%, transparent 45%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 35%, transparent 45%, transparent 100%);
+  }
+  46% {
+    -webkit-mask: conic-gradient(#000 0, #000 36%, transparent 46%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 36%, transparent 46%, transparent 100%);
+  }
+  47% {
+    -webkit-mask: conic-gradient(#000 0, #000 37%, transparent 47%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 37%, transparent 47%, transparent 100%);
+  }
+  48% {
+    -webkit-mask: conic-gradient(#000 0, #000 38%, transparent 48%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 38%, transparent 48%, transparent 100%);
+  }
+  49% {
+    -webkit-mask: conic-gradient(#000 0, #000 39%, transparent 49%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 39%, transparent 49%, transparent 100%);
+  }
+  50% {
+    -webkit-mask: conic-gradient(#000 0, #000 40%, transparent 50%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 40%, transparent 50%, transparent 100%);
+  }
+  51% {
+    -webkit-mask: conic-gradient(#000 0, #000 41%, transparent 51%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 41%, transparent 51%, transparent 100%);
+  }
+  52% {
+    -webkit-mask: conic-gradient(#000 0, #000 42%, transparent 52%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 42%, transparent 52%, transparent 100%);
+  }
+  53% {
+    -webkit-mask: conic-gradient(#000 0, #000 43%, transparent 53%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 43%, transparent 53%, transparent 100%);
+  }
+  54% {
+    -webkit-mask: conic-gradient(#000 0, #000 44%, transparent 54%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 44%, transparent 54%, transparent 100%);
+  }
+  55% {
+    -webkit-mask: conic-gradient(#000 0, #000 45%, transparent 55%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 45%, transparent 55%, transparent 100%);
+  }
+  56% {
+    -webkit-mask: conic-gradient(#000 0, #000 46%, transparent 56%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 46%, transparent 56%, transparent 100%);
+  }
+  57% {
+    -webkit-mask: conic-gradient(#000 0, #000 47%, transparent 57%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 47%, transparent 57%, transparent 100%);
+  }
+  58% {
+    -webkit-mask: conic-gradient(#000 0, #000 48%, transparent 58%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 48%, transparent 58%, transparent 100%);
+  }
+  59% {
+    -webkit-mask: conic-gradient(#000 0, #000 49%, transparent 59%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 49%, transparent 59%, transparent 100%);
+  }
+  60% {
+    -webkit-mask: conic-gradient(#000 0, #000 50%, transparent 60%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 50%, transparent 60%, transparent 100%);
+  }
+  61% {
+    -webkit-mask: conic-gradient(#000 0, #000 51%, transparent 61%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 51%, transparent 61%, transparent 100%);
+  }
+  62% {
+    -webkit-mask: conic-gradient(#000 0, #000 52%, transparent 62%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 52%, transparent 62%, transparent 100%);
+  }
+  63% {
+    -webkit-mask: conic-gradient(#000 0, #000 53%, transparent 63%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 53%, transparent 63%, transparent 100%);
+  }
+  64% {
+    -webkit-mask: conic-gradient(#000 0, #000 54%, transparent 64%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 54%, transparent 64%, transparent 100%);
+  }
+  65% {
+    -webkit-mask: conic-gradient(#000 0, #000 55%, transparent 65%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 55%, transparent 65%, transparent 100%);
+  }
+  66% {
+    -webkit-mask: conic-gradient(#000 0, #000 56%, transparent 66%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 56%, transparent 66%, transparent 100%);
+  }
+  67% {
+    -webkit-mask: conic-gradient(#000 0, #000 57%, transparent 67%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 57%, transparent 67%, transparent 100%);
+  }
+  68% {
+    -webkit-mask: conic-gradient(#000 0, #000 58%, transparent 68%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 58%, transparent 68%, transparent 100%);
+  }
+  69% {
+    -webkit-mask: conic-gradient(#000 0, #000 59%, transparent 69%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 59%, transparent 69%, transparent 100%);
+  }
+  70% {
+    -webkit-mask: conic-gradient(#000 0, #000 60%, transparent 70%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 60%, transparent 70%, transparent 100%);
+  }
+  71% {
+    -webkit-mask: conic-gradient(#000 0, #000 61%, transparent 71%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 61%, transparent 71%, transparent 100%);
+  }
+  72% {
+    -webkit-mask: conic-gradient(#000 0, #000 62%, transparent 72%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 62%, transparent 72%, transparent 100%);
+  }
+  73% {
+    -webkit-mask: conic-gradient(#000 0, #000 63%, transparent 73%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 63%, transparent 73%, transparent 100%);
+  }
+  74% {
+    -webkit-mask: conic-gradient(#000 0, #000 64%, transparent 74%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 64%, transparent 74%, transparent 100%);
+  }
+  75% {
+    -webkit-mask: conic-gradient(#000 0, #000 65%, transparent 75%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 65%, transparent 75%, transparent 100%);
+  }
+  76% {
+    -webkit-mask: conic-gradient(#000 0, #000 66%, transparent 76%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 66%, transparent 76%, transparent 100%);
+  }
+  77% {
+    -webkit-mask: conic-gradient(#000 0, #000 67%, transparent 77%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 67%, transparent 77%, transparent 100%);
+  }
+  78% {
+    -webkit-mask: conic-gradient(#000 0, #000 68%, transparent 78%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 68%, transparent 78%, transparent 100%);
+  }
+  79% {
+    -webkit-mask: conic-gradient(#000 0, #000 69%, transparent 79%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 69%, transparent 79%, transparent 100%);
+  }
+  80% {
+    -webkit-mask: conic-gradient(#000 0, #000 70%, transparent 80%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 70%, transparent 80%, transparent 100%);
+  }
+  81% {
+    -webkit-mask: conic-gradient(#000 0, #000 71%, transparent 81%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 71%, transparent 81%, transparent 100%);
+  }
+  82% {
+    -webkit-mask: conic-gradient(#000 0, #000 72%, transparent 82%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 72%, transparent 82%, transparent 100%);
+  }
+  83% {
+    -webkit-mask: conic-gradient(#000 0, #000 73%, transparent 83%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 73%, transparent 83%, transparent 100%);
+  }
+  84% {
+    -webkit-mask: conic-gradient(#000 0, #000 74%, transparent 84%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 74%, transparent 84%, transparent 100%);
+  }
+  85% {
+    -webkit-mask: conic-gradient(#000 0, #000 75%, transparent 85%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 75%, transparent 85%, transparent 100%);
+  }
+  86% {
+    -webkit-mask: conic-gradient(#000 0, #000 76%, transparent 86%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 76%, transparent 86%, transparent 100%);
+  }
+  87% {
+    -webkit-mask: conic-gradient(#000 0, #000 77%, transparent 87%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 77%, transparent 87%, transparent 100%);
+  }
+  88% {
+    -webkit-mask: conic-gradient(#000 0, #000 78%, transparent 88%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 78%, transparent 88%, transparent 100%);
+  }
+  89% {
+    -webkit-mask: conic-gradient(#000 0, #000 79%, transparent 89%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 79%, transparent 89%, transparent 100%);
+  }
+  90% {
+    -webkit-mask: conic-gradient(#000 0, #000 80%, transparent 90%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 80%, transparent 90%, transparent 100%);
+  }
+  91% {
+    -webkit-mask: conic-gradient(#000 0, #000 81%, transparent 91%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 81%, transparent 91%, transparent 100%);
+  }
+  92% {
+    -webkit-mask: conic-gradient(#000 0, #000 82%, transparent 92%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 82%, transparent 92%, transparent 100%);
+  }
+  93% {
+    -webkit-mask: conic-gradient(#000 0, #000 83%, transparent 93%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 83%, transparent 93%, transparent 100%);
+  }
+  94% {
+    -webkit-mask: conic-gradient(#000 0, #000 84%, transparent 94%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 84%, transparent 94%, transparent 100%);
+  }
+  95% {
+    -webkit-mask: conic-gradient(#000 0, #000 85%, transparent 95%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 85%, transparent 95%, transparent 100%);
+  }
+  96% {
+    -webkit-mask: conic-gradient(#000 0, #000 86%, transparent 96%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 86%, transparent 96%, transparent 100%);
+  }
+  97% {
+    -webkit-mask: conic-gradient(#000 0, #000 87%, transparent 97%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 87%, transparent 97%, transparent 100%);
+  }
+  98% {
+    -webkit-mask: conic-gradient(#000 0, #000 88%, transparent 98%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 88%, transparent 98%, transparent 100%);
+  }
+  99% {
+    -webkit-mask: conic-gradient(#000 0, #000 89%, transparent 99%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 89%, transparent 99%, transparent 100%);
+  }
+  100% {
+    -webkit-mask: conic-gradient(#000 0, #000 90%, transparent 100%, transparent 100%);
+            mask: conic-gradient(#000 0, #000 90%, transparent 100%, transparent 100%);
+  }
+}/*# sourceMappingURL=02.css.map */
