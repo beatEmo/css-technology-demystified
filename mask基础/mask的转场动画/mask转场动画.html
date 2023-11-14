@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    .g-container {
+      width: 400px;
+      height: 200px;
+    }
+    .img1 {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      left: 0;
+      top: 0;
+      background: url(https://s.newtalk.tw/album/news/111/5a558de0a141b.jpg);
+      background-size: cover;
+    }
+
+    .img2 {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      left: 0;
+      top: 0;
+      background: url(https://estnn.com/wp-content/uploads/2020/07/yone-splash-800x450.jpg);
+      background-size: cover;
+      -webkit-mask: url(https://i.imgur.com/AYJuRke.png);
+      -webkit-mask-size: 3000% 100%;
+      animation: maskMove 2s steps(29) infinite;
+    }
+
+    @keyframes maskMove {
+      from {
+        -webkit-mask-position: 0 0;
+      }
+      to {
+        -webkit-mask-position: 100% 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="g-container">
+      <div class="img1"></div>
+      <div class="img2"></div>
+    </div>
+  </body>
+</html>
