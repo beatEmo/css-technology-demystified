@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      font-size: 25px;
+    }
+
+    .wrap {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .container {
+      height: 20px;
+      width: 100%;
+      background: #eaeaea;
+      margin-bottom: 20px;
+    }
+
+    .elem {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      left: 0;
+      background: #fc7f6f;
+      left: -40px;
+    }
+
+    .elem1 {
+      animation: go-and-back 3s 2s linear none;
+    }
+
+    .elem2 {
+      animation: go-and-back 3s 2s linear forwards;
+    }
+
+    .elem3 {
+      animation: go-and-back 3s 2s linear backwards;
+    }
+
+    .elem4 {
+      animation: go-and-back 3s 2s linear both;
+    }
+
+    @keyframes go-and-back {
+      0% {
+        left: 0;
+        background: #3498db;
+      }
+
+      100% {
+        left: calc(100% - 20px);
+        background: #2ecc71;
+      }
+    }
+
+    p {
+      margin: 5px 0;
+      color: #999;
+      font-family: arial;
+      font-size: 13px;
+    }
+
+    em {
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <h1>animation-fill-mode Demo</h1>
+
+      <p>元素在动画前的位置</p>
+      <div class="container">
+        <div class="elem"></div>
+      </div>
+
+      <p>Animation-direction: <em>none</em>;</p>
+      <div class="container">
+        <div class="elem elem1"></div>
+      </div>
+
+      <p>Animation-direction: <em>forwards</em>;</p>
+      <div class="container">
+        <div class="elem elem2"></div>
+      </div>
+
+      <p>Animation-direction: <em>backwards</em>;</p>
+      <div class="container">
+        <div class="elem elem3"></div>
+      </div>
+
+      <p>Animation-direction: <em>both</em>;</p>
+      <div class="container">
+        <div class="elem elem4"></div>
+      </div>
+    </div>
+  </body>
+</html>

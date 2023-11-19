@@ -1,0 +1,36 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+ul {
+  width: 200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+li {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #000;
+  animation: move 3s infinite 1s linear;
+}
+@for $i from 1 to 11 {
+  li:nth-child(#{$i}) {
+    animation-duration: #{random(2000) / 1000 + 2}s;
+    animation-delay: #{random(1000) / 1000 + 1}s;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100px);
+  }
+}

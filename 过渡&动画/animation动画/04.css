@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #222;
+  animation: color 40s linear infinite;
+  overflow: hidden;
+  background: radial-gradient(circle at center center, #2a2a2a, black);
+}
+
+@keyframes color {
+  from, to {
+    color: yellow;
+  }
+  33% {
+    color: cyan;
+  }
+  66% {
+    color: magenta;
+  }
+}
+figure {
+  transform: translateY(80vh);
+}
+
+figure,
+.wheel {
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+}
+
+.wheel {
+  animation: ticktock 2s cubic-bezier(1, -0.21, 0.85, 1.29) infinite;
+}
+
+@keyframes ticktock {
+  to {
+    transform: rotate(-22.5deg);
+  }
+  50% {
+    transform: rotate(-11.25deg);
+  }
+}
+div {
+  font: 800 20vh/20vh Lato, monospace;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 1000%;
+  top: -90vh;
+  animation: bop 1s infinite;
+}
+div:nth-child(even):after {
+  content: "O";
+}
+div:nth-child(odd):after {
+  content: "I";
+}
+div:nth-child(1) {
+  transform: rotate(11.25deg);
+}
+div:nth-child(2) {
+  transform: rotate(22.5deg);
+}
+div:nth-child(3) {
+  transform: rotate(33.75deg);
+}
+div:nth-child(4) {
+  transform: rotate(45deg);
+}
+div:nth-child(5) {
+  transform: rotate(56.25deg);
+}
+div:nth-child(6) {
+  transform: rotate(67.5deg);
+}
+div:nth-child(7) {
+  transform: rotate(78.75deg);
+}
+div:nth-child(8) {
+  transform: rotate(90deg);
+}
+div:nth-child(9) {
+  transform: rotate(101.25deg);
+}
+div:nth-child(10) {
+  transform: rotate(112.5deg);
+}
+div:nth-child(11) {
+  transform: rotate(123.75deg);
+}
+div:nth-child(12) {
+  transform: rotate(135deg);
+}
+div:nth-child(13) {
+  transform: rotate(146.25deg);
+}
+div:nth-child(14) {
+  transform: rotate(157.5deg);
+}
+div:nth-child(15) {
+  transform: rotate(168.75deg);
+}
+div:nth-child(16) {
+  transform: rotate(180deg);
+}
+div:nth-child(17) {
+  transform: rotate(191.25deg);
+}
+div:nth-child(18) {
+  transform: rotate(202.5deg);
+}
+div:nth-child(19) {
+  transform: rotate(213.75deg);
+}
+div:nth-child(20) {
+  transform: rotate(225deg);
+}
+div:nth-child(21) {
+  transform: rotate(236.25deg);
+}
+div:nth-child(22) {
+  transform: rotate(247.5deg);
+}
+div:nth-child(23) {
+  transform: rotate(258.75deg);
+}
+div:nth-child(24) {
+  transform: rotate(270deg);
+}
+div:nth-child(25) {
+  transform: rotate(281.25deg);
+}
+div:nth-child(26) {
+  transform: rotate(292.5deg);
+}
+div:nth-child(27) {
+  transform: rotate(303.75deg);
+}
+div:nth-child(28) {
+  transform: rotate(315deg);
+}
+div:nth-child(29) {
+  transform: rotate(326.25deg);
+}
+div:nth-child(30) {
+  transform: rotate(337.5deg);
+}
+div:nth-child(31) {
+  transform: rotate(348.75deg);
+}
+div:nth-child(32) {
+  transform: rotate(360deg);
+}
+div.hand {
+  transform: none;
+}
+div.hand:before, div.hand:after {
+  transform: translateY(-20vh);
+}
+div.hand:before {
+  display: block;
+  content: "T";
+}
+div.hand:after {
+  transform: translateY(-20vh);
+  content: "C \aK";
+}/*# sourceMappingURL=04.css.map */

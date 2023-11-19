@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 256px;
+      height: 256px;
+      background: url("./05.awebp");
+      animation: sprite 2s steps(6, jump-both) infinite;
+    }
+    @keyframes sprite {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -1536px 0;
+      }
+    }
+  </style>
+  <body>
+    <div></div>
+  </body>
+</html>

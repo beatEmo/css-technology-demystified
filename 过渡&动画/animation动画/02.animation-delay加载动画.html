@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    div > span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: black;
+      transform-origin: 100% 100%;
+    }
+    div > span:nth-child(1) {
+      animation: rotate 3s linear infinite;
+    }
+    div > span:nth-child(2) {
+      animation: rotate 3s -1s linear infinite;
+    }
+    div > span:nth-child(3) {
+      animation: rotate 3s -2s linear infinite;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotateZ(0deg);
+      }
+      to {
+        transform: rotateZ(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+$background: #222;
+$size: 20vh;
+$stops: 32;
+$ease: cubic-bezier(1, -0.21, 0.85, 1.29);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: $background;
+  animation: color 40s linear infinite;
+  overflow: hidden;
+  background: radial-gradient(circle at center center, #2a2a2a, black);
+}
+
+@keyframes color {
+  from,
+  to {
+    color: yellow;
+  }
+  33% {
+    color: cyan;
+  }
+  66% {
+    color: magenta;
+  }
+}
+
+figure {
+  transform: translateY($size * 4);
+}
+
+figure,
+.wheel {
+  position: relative;
+  width: $size;
+  height: $size;
+}
+
+.wheel {
+  animation: ticktock 2s $ease infinite;
+}
+
+@keyframes ticktock {
+  $spin: 2 / $stops * -360deg;
+  to {
+    transform: rotate($spin);
+  }
+  50% {
+    transform: rotate($spin/2);
+  }
+}
+
+div {
+  font: 800 $size/#{$size} Lato, monospace;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 1000%;
+  top: -$size * 4.5;
+  animation: bop 1s infinite;
+
+  &:nth-child(even):after {
+    content: "O";
+  }
+  &:nth-child(odd):after {
+    content: "I";
+  }
+
+  @for $i from 1 through $stops {
+    &:nth-child(#{$i}) {
+      $turn: $i/$stops * 360deg;
+      transform: rotate($turn);
+    }
+  }
+
+  &.hand {
+    transform: none;
+
+    &:before,
+    &:after {
+      transform: translateY(-$size);
+    }
+    &:before {
+      display: block;
+      content: "T";
+    }
+    &:after {
+      transform: translateY(-$size);
+      content: "C \a K";
+    }
+  }
+}
