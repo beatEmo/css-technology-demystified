@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .swiper {
+      /* position: static; */
+      position: relative;
+      animation: 10s move infinite;
+      z-index: 100;
+    }
+
+    .list {
+      position: relative;
+    }
+
+    @keyframes move {
+      100% {
+        transform: translate3d(10px, 0, 0);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="swiper">轮播图</div>
+      <ul class="list">
+        <li>列表li</li>
+        <li>列表li</li>
+        <li>列表li</li>
+        <li>列表li</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 5px solid #000;
+    }
+
+    div:nth-child(1) {
+      animation: moveMargin 3s infinite linear;
+      /* position: absolute; */
+    }
+    div:nth-child(2) {
+      opacity: 0;
+      animation: moveTransform 3s infinite linear;
+    }
+
+    @keyframes moveMargin {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 300px;
+      }
+    }
+
+    @keyframes moveTransform {
+      0% {
+        /* transform: translateX(0); */
+
+        opacity: 0;
+      }
+      100% {
+        /* transform: translateX(300px); */
+        opacity: 1;
+      }
+    }
+  </style>
+  <body>
+    <div></div>
+    <div></div>
+  </body>
+</html>
