@@ -1,0 +1,100 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  caret-color: transparent;
+}
+.g-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  line-height: 200px;
+  text-align: center;
+  font-size: 80px;
+  color: #333;
+  background: repeating-linear-gradient(
+    30deg,
+    #999,
+    #999 50px,
+    #eee 50px,
+    #eee 100px
+  );
+}
+
+.g-container {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  border: 2px solid #333;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.g-box {
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.g-wrap {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  z-index: 10;
+
+  &:active {
+    display: none;
+  }
+}
+
+.g-btn {
+  position: absolute;
+  top: -36px;
+  border: 1px solid #666;
+  padding: 5px;
+  cursor: pointer;
+  background: #fff;
+  &:active {
+    user-select: none;
+    filter: contrast(0.8);
+  }
+}
+
+.g-btn:active ~ .g-box .g-item {
+  transition: 0s;
+  display: none;
+}
+
+.g-row {
+  width: 600px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.g-item {
+  width: 20px;
+  height: 20px;
+  background: rgba(100, 100, 100, 1);
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: 9999999s;
+  border-radius: 50%;
+  transform: scale(1.6);
+}
+
+.g-item:hover {
+  background: rgba(100, 100, 100, 0);
+  transition-duration: 0s;
+}

@@ -1,0 +1,65 @@
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 4px;
+    height: 8px;
+    background-color: red;
+    animation: line 2s -1s infinite;
+  }
+  .list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    & > .item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 5px;
+      height: 5px;
+    }
+    @for $i from 1 to 40 {
+      $z: #{random(360)};
+
+      & > .item:nth-child(#{$i}) {
+        background-color: rgb(random(255), random(255), random(255));
+        transform: rotateZ(#{$z}deg);
+        animation: move#{$i} 1s #{random()}s;
+        animation-composition: accumulate;
+      }
+
+      @keyframes move#{$i} {
+        from {
+          transform: rotateZ(#{$z}deg) translate(0);
+        }
+        to {
+          transform: rotateZ(#{$z}deg) translateX(50px);
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+@keyframes line {
+  to {
+    transform: scale(1.4);
+  }
+}

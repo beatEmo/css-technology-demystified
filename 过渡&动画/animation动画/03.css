@@ -23,53 +23,53 @@ li {
 }
 
 li:nth-child(1) {
-  animation-duration: 3.87s;
-  animation-delay: 1.519s;
+  animation-duration: 2.786s;
+  animation-delay: 1.675s;
 }
 
 li:nth-child(2) {
-  animation-duration: 2.904s;
-  animation-delay: 1.18s;
+  animation-duration: 3.238s;
+  animation-delay: 1.015s;
 }
 
 li:nth-child(3) {
-  animation-duration: 2.709s;
-  animation-delay: 1.629s;
+  animation-duration: 3.79s;
+  animation-delay: 1.615s;
 }
 
 li:nth-child(4) {
-  animation-duration: 2.041s;
-  animation-delay: 1.562s;
+  animation-duration: 3.907s;
+  animation-delay: 1.196s;
 }
 
 li:nth-child(5) {
-  animation-duration: 3.02s;
-  animation-delay: 1.934s;
+  animation-duration: 3.766s;
+  animation-delay: 1.575s;
 }
 
 li:nth-child(6) {
-  animation-duration: 2.43s;
-  animation-delay: 1.238s;
+  animation-duration: 3.49s;
+  animation-delay: 1.922s;
 }
 
 li:nth-child(7) {
-  animation-duration: 2.162s;
-  animation-delay: 1.121s;
+  animation-duration: 3.461s;
+  animation-delay: 1.753s;
 }
 
 li:nth-child(8) {
-  animation-duration: 2.28s;
-  animation-delay: 1.085s;
+  animation-duration: 2.025s;
+  animation-delay: 1.452s;
 }
 
 li:nth-child(9) {
-  animation-duration: 2.839s;
-  animation-delay: 1.041s;
+  animation-duration: 3.193s;
+  animation-delay: 1.12s;
 }
 
 li:nth-child(10) {
-  animation-duration: 2.49s;
-  animation-delay: 1.429s;
+  animation-duration: 2.199s;
+  animation-delay: 1.436s;
 }
 
 @keyframes move {
@@ -79,4 +79,4 @@ li:nth-child(10) {
   100% {
     transform: translate(0, -100px);
   }
-} /*# sourceMappingURL=03.css.map */
+}/*# sourceMappingURL=03.css.map */

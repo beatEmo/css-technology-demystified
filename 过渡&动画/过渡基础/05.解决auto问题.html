@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .btn1 {
+      width: fit-content;
+    }
+    .btn1Con {
+      overflow: hidden;
+      position: relative;
+      width: 100px;
+      font-size: 12px;
+      border: 1px solid #000;
+      transition: 0.3s;
+      max-height: 0;
+      /* height: 0; */
+    }
+    .btn1:hover .btn1Con {
+      max-height: 300px;
+      /* height: unset; */
+    }
+    .btn2Con {
+      overflow: hidden;
+      position: relative;
+      width: 100px;
+      height: 0;
+      font-size: 12px;
+      border: 1px solid #000;
+    }
+  </style>
+  <body>
+    <div style="display: flex; justify-content: space-around">
+      <div class="btn1">
+        Hover Me1
+        <div class="btn1Con">
+          开发口服看凯珀尔啃骨头i人家哟i公司的风控斯蒂芬OK金佛山看见过佛山看佛菩萨的看佛
+        </div>
+      </div>
+      <div class="btn2">
+        Hover Me2
+        <div class="btn2Con">
+          开发口服看凯珀尔啃骨头i人家哟i公司的风控斯蒂芬OK金佛山看见过佛山看佛菩萨的看佛
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector(".btn2");
+    const detail = document.querySelector(".btn2Con");
+    btn.onmouseenter = function () {
+      // filp动画思路
+      detail.style.transition = ".3s";
+      detail.style.height = "auto";
+      const { height } = detail.getBoundingClientRect();
+      detail.style.height = 0;
+      detail.offsetHeight;
+      detail.style.height = height + "px";
+    };
+    btn.onmouseleave = function () {
+      detail.style.height = 0;
+      detail.style.transition = ".3s";
+    };
+  </script>
+</html>
