@@ -32,6 +32,7 @@
     //     pointer.remove();
     //   });
     // });
+    const ball = document.querySelector(".ball");
     const init = () => {
       const x = window.innerWidth / 2;
       const y = window.innerHeight / 2;
@@ -48,7 +49,6 @@
       ball.getAnimations().forEach((animate) => animate.cancel());
       const rad = Math.atan2(y - bally, x - ballx);
       const deg = (rad * 180) / Math.PI;
-      const ball = document.querySelector(".ball");
       ball.animate(
         [
           {
