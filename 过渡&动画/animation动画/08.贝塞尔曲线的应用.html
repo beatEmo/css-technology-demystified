@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      width: 500px;
+      height: 400px;
+      /* background-color: gray; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @property --x {
+      syntax: "<length>";
+      initial-value: 0px;
+      inherits: false;
+    }
+    @property --y {
+      syntax: "<length>";
+      initial-value: 0px;
+      inherits: false;
+    }
+    .boll {
+      transform: translate(var(--x), var(--y));
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: aqua;
+      animation: x 2s, y 1s;
+      animation-timing-function: cubic-bezier(0.5, -300, 0.5, 300);
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    @keyframes x {
+      to {
+        --x: 1px;
+      }
+    }
+    @keyframes y {
+      to {
+        --y: 0.1px;
+      }
+    }
+    /* @keyframes x {
+      to {
+        transform: translateX(1px);
+      }
+    }
+    @keyframes y {
+      to {
+        transform: translateY(1px);
+      }
+    } */
+  </style>
+  <body>
+    <div class="container">
+      <div class="boll"></div>
+    </div>
+  </body>
+</html>
